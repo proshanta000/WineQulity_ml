@@ -1,0 +1,7 @@
+artifacts_root: artifacts_root # Note: This line must also be a key: value pair
+
+data_ingestion:
+    root_dir: artifacts/data_ingestion
+    source_URL: https://github.com/proshanta000/project_data/raw/refs/heads/main/winequality.zip
+    local_data_file: artifacts/data_ingestion/data.zip
+    unzip_dir: artifacts/data_ingestion
