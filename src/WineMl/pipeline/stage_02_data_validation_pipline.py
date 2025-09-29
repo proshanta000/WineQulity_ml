@@ -36,7 +36,7 @@ if __name__ == '__main__':
         logger.info(f">>>>>>>>>> stage {STAGE_NAME} started <<<<<<<<<<")
         
         # Create an instance of the pipeline class
-        obj = DataIngestionTraningPipeline()
+        obj = DataValidationgPipeline()
         
         # Run the main method of the pipeline
         obj.main()
