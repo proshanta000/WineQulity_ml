@@ -1,13 +1,13 @@
 # Import necessary modules
 from WineMl.config.configuration import ConfigurationManager
-from WineMl.components.data_ingestion import DataIngestion
+from WineMl.components.data_validation import DataValidation
 from WineMl import logger
 
 # Define a constant for the stage name to be used in logging
-STAGE_NAME = "Data Ingestion Stage"
+STAGE_NAME = "Data Validation Stage"
 
 # Define the main pipeline class for the data ingestion stage
-class DataIngestionPipeline:
+class DataValidationgPipeline:
     def __init__(self):
         # The constructor can be used to set up initial properties if needed.
         # In this case, it's empty as the main logic is in the 'main' method.
@@ -24,17 +24,9 @@ class DataIngestionPipeline:
         # Create an instance of ConfigurationManager to access the configurations
         config = ConfigurationManager()
         
-        # Get the specific data ingestion configuration from the manager
-        data_ingestion_config = config.get_data_ingestion_config()
-        
-        # Instantiate the DataIngestion component with the fetched configuration
-        data_ingestion = DataIngestion(config=data_ingestion_config)
-        
-        # Call the method to download the data file from the source URL
-        data_ingestion.download_file()
-        
-        # Call the method to extract the downloaded zip file
-        data_ingestion.extract_zip_file()
+        data_validation_config = config.get_data_validation_config()
+        data_validation = DataValidation(config = data_validation_config)
+        data_validation.validate_all_column()
 
 # Entry point of the script
 if __name__ == '__main__':
