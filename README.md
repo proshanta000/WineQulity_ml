@@ -40,9 +40,8 @@ pip install -r requirements.txt
 [dagshub](https://dagshub.com/)
 
 ```bash
-export MLFLOW_TRACKING_URI=https://dagshub.com/proshanta000/End_to_End_ml_project_chest_CT_scan.mlflow
-
+export MLFLOW_TRACKING_URI=https://dagshub.com/proshanta000/WineQulity_ml.mlflow
 export MLFLOW_TRACKING_USERNAME= proshanta000
 
-export MLFLOW_TRACKING_PASSWORD= d856c7bfcbe6c5c979320b3160b26a5a3e1f4355
+export MLFLOW_TRACKING_PASSWORD= *****
 ```
